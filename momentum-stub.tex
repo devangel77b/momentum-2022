@@ -1,0 +1,120 @@
+\documentclass[aps,prl,reprint]{revtex4-1}
+
+\usepackage{amsmath,amssymb,amsfonts}
+\usepackage{siunitx}
+\sisetup{separate-uncertainty=true}
+\usepackage{fancyref}
+\usepackage{graphicx}
+\usepackage{listings}
+\lstset{basicstyle=\ttfamily}
+\usepackage{hyperref}
+\usepackage[dvipsnames]{xcolor}
+\hypersetup{
+  colorlinks=true,
+  linkcolor=violet,
+  urlcolor=blue,
+  citecolor=blue}
+
+\usepackage{lineno}
+
+\begin{document}
+%\linenumbers
+\title{Please decide on a title}
+\author{Your Name}
+\email{flastname\_25@mbs.net}
+\author{D Evangelista}
+\affiliation{Morristown-Beard School}
+
+\newcommand{\student}[1]{{{#1}}}
+
+\begin{abstract}
+Momentum is the product of mass times velocity ($\vec{p}=m\vec{v}$). It is potentially useful for understanding the mechanics of collisions. We examined \student{YOU FILL IN...}  We found \student{YOU FILL IN...}\end{abstract}
+\maketitle
+
+\section{Introduction}
+\textbf{Dr Evangelista will help with this part...}
+
+Kinetic energy for a point mass is given by:
+blah blah...
+%\begin{equation}
+%\text{momentum}\ \vec{p} = m \vec{v},
+%\label{eq:momentum}
+%\end{equation}
+%where $m$ is mass in \si{\kilo\gram} and $\vec{v}$ is the velocity in \si{\meter\per\second} \cite{newton-1687-principia}.  \Fref{eq:momentum} reflects that the ``hitting power'' of an object involves both its mass and its velocity \cite{newton-1687-principia}. Formally, momentum is a vector quantity; here we consider one-dimensional (1D) collisions and will drop the vector notation for simplicity.  
+%
+%Momentum is potentially useful for understanding collisions in which two bodies collide and stick (as in inelastic collisions) or bounce off one another (as in elastic collisions). If momentum is conserved during such collisions, it could be a powerful and useful concept for quickly and easily determining the final velocities of each of the bodies \cite{newton-1687-principia}. 
+
+Therefore, we wish to answer the question, is energy conserved during an elastic collision? We consider the total energy of the two-body system before ($E_0$) and after ($E_f$) the collision as
+\begin{align}
+E_0 &= \frac{1}{2} m_1 v_{1,0}^2\ \text{before collision}\\
+E_f &= \frac{1}{2} m_1 v_{1,f}^2 + \frac{1}{2} m_2 v_{2,f}^2\ \text{after collision}.
+\end{align}
+We hypothesize that energy is conserved during such collisions:
+\begin{equation}
+H_0: E_f = E_0\ \text{(energy is conserved)}.
+\end{equation}
+Alternatively, energy could somehow increase during a collision; or it could decrease owing to friction or other loss mechanisms bleeding energy from the system: 
+\begin{align}
+H_1: E_f &> E_0\ \text{(energy increases)} \\
+H_2: E_f &< E_0\ \text{(energy decreases)} .
+\end{align}
+
+We tested these hypotheses by conducting a large number of two-body inelastic collisions with known masses and observing the velocities before and after the collision. For each collision, we found the total system $E_0$ and $E_f$ to determine whether energy is conserved or not. 
+\begin{figure}[h]
+\begin{center}
+%\includegraphics[width=\columnwidth]{IMG_6253.jpg}
+\includegraphics[width=\columnwidth]{fig1.png}
+\end{center}
+\caption{Momentum test track used for experiments. Total length \SI{2.1}{\meter}.}
+\label{fig:methods1}
+\end{figure}
+
+\section{Methods and materials}
+\subsection{Elastic collision tests}
+Elastic collision tests ($n=80$) were conducted using a \SI{2.1}{\meter} aluminum momentum test track (Vernier; Beaverton, OR; see \fref{fig:methods1}). The test track was outfitted with two small wheeled carts (mass of cart \SI{0.3}{\kilo\gram}) with simple sliding contact bearings; mass of each cart could be increased by addition of up to four \SI{0.125}{\kilo\gram} masses for a total mass of \SI{0.8}{\kilo\gram}. The mass was measured using an electronic balance (Ohaus; Parsippany, NJ).    Magnets of opposite polarity allowed the carts to stick after the inelastic collision. Carts were actuated by hand to provide initial velocities. The position of the two carts was measured using two ultrasound range sensors (Go Direct; Vernier; Beaverton, OR). Sensor data were logged at \SI{20}{\hertz} sampling frequency, via a wireless Bluetooth link, using the Graphical Analysis app (Vernier; Beaverton, OR) running on an iPad Air (Apple; Cupertino, CA). From the position data, the slope of position versus time was used to estimate velocities before and after the collision.  The mass, velocity, and direction down the track were varied haphazardly.   
+
+ \subsection{Energy calculations}
+ Calculations were performed using both Graphical Analysis and Sheets (Google; Mountain View, CA). 
+ Energy before the collision was calculated as
+ \begin{equation}
+E_0 = \frac{1}{2} m_1 v_{1,0}^2
+ \end{equation}
+Similarly, the final energy was calculated as
+ \begin{equation}
+E_f = \frac{1}{2} m_1 v_{1,f}^2 + \frac{1}{2} m_2 v_{2,f}^2
+ \end{equation}
+and the difference in momentum as 
+ \begin{equation}
+\Delta E =  E_f - E_0. 
+ \end{equation}
+For nondimensional comparisons, we also computed the ratio of the change of energy to the initial energy ($\hat{\pi}=\frac{\Delta E}{E_0}$). Additional plots and $t$-tests were done using R \cite{r-2021} and the \lstinline{tidyverse} library \cite{wickham-2019-welcome}. 
+
+\section{Results}
+Dr Evangelista will help with this. 
+
+\begin{figure}
+\begin{center}
+\includegraphics{inelastic.pdf}
+\end{center}
+\caption{Dr Evangelista will fix this. Position data for a typical inelastic collision with equal masses, $m_1=m_2=\SI{0.3}{\kilo\gram}$. Initially, $m_2$ is stationary and $m_1$ is moving at \SI{0.62}{\meter\per\second}. The masses collide at $t=\SI{1.5}{\second}$. After the collision, $m_1$ and $m_2$ are both moving with velocity $v_f=\SI{0.3}{\meter\per\second}$. }
+\label{fig:results1}
+\end{figure}
+
+\begin{figure}
+\begin{center}
+\includegraphics{momentum-change.pdf}
+\end{center}
+\caption{Dr Evangelista will fix this. Change in momentum ($\Delta p$) during all inelastic collisions. $\Delta p = \SI{-0.01\pm0.06}{\kilo\gram\meter\per\second}$ (mean $\pm$ s.d.). The mean $\Delta p$ is not significantly different from \SI{0}{\kilo\gram\meter\per\second} (one-sample $t$-test, $n=72$, d.f.=71, $p=0.2596$).}
+\label{fig:results2}
+\end{figure}
+
+\section{Discussion}
+\student{YOU FILL IN. You will probably write one paragraph using your results to answer if energy is conserved or not. You will probably then write a second paragraph discussing limitations of your findings or proposing some sort of follow-on experiment to do next.}
+
+\section{Acknowledgements}
+We thank \student{YOU FILL IN}, C.~Payette, J.~Bartholomew, B.~Turner, K.~Mauger, and S.~McCormick for useful advice and comments on the manuscript, and A.~Hahn and S.~Kealy for advice on the design of experiment and learning objectives. Major lab equipment was gifted by the Alumni Association at Morristown-Beard School. This work was funded by ONR \#N123456789, AFOSR, NIH, and the National Science Foundation. 
+
+\bibliographystyle{apsrev4-1} % Tell bibtex which bibliography style to use
+\bibliography{momentum} % Tell bibtex which .bib file to use (this one is some example file in TexLive's file tree)
+
+\end{document}
