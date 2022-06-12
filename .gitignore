@@ -1,3 +1,6 @@
+*.RData
+*.Rapp.history
+*.Rhistory
 *Notes.bib
 *.pdf
 *~

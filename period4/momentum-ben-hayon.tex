@@ -1,4 +1,4 @@
-\documentclass[aps,prl,reprint]{revtex4-1}
+\documentclass[aps,prl,preprint]{revtex4-1}
 
 \usepackage{amsmath,amssymb,amsfonts}
 \usepackage{siunitx}
@@ -18,17 +18,19 @@
 \usepackage{lineno}
 
 \begin{document}
-%\linenumbers
+\linenumbers
 \title{Please decide on a title}
-\author{Your Name}
-\email{flastname\_25@mbs.net}
+\author{Jake Ben-Hayon}
+\email{jbenhayon\_25@mbs.net}
 \author{D Evangelista}
-\affiliation{Morristown Beard School}
+\affiliation{Morristown-Beard School}
 
 \newcommand{\student}[1]{{\textcolor{red}{#1}}}
 
 \begin{abstract}
-Momentum is the product of mass times velocity ($\vec{p}=m\vec{v}$), and kinetic energy of a moving mass is given by $\frac{1}{2}mv^2$. Both are potentially useful for understanding the mechanics of collisions, but while previous studies have examined momentum conservation during inelastic collisions \cite{ortega-2021-momentum}, they have not considered energy conservation during elastic collisions. We examined \student{YOU FILL IN...}  We found \student{YOU FILL IN...}\end{abstract}
+Momentum is the product of mass times velocity ($\vec{p}=m\vec{v}$), and kinetic energy of a moving mass is given by $\frac{1}{2}mv^2$. Both are potentially useful for understanding the mechanics of collisions, but while previous studies have examined momentum conservation during inelastic collisions \cite{ortega-2021-momentum}, they have not considered energy conservation during elastic collisions. We examined \student{whether energy is conserved during an
+elastic collsion. Then we found energy was in fact conserved.}
+\end{abstract}
 \maketitle
 
 \section{Introduction}
@@ -62,10 +64,10 @@ We tested these hypotheses by conducting a large number of two-body elastic coll
 
 \section{Methods and materials}
 \subsection{Elastic collision tests}
-Elastic collision tests ($n=80$) were conducted using a \SI{2.1}{\meter} aluminum momentum test track (Vernier; Beaverton, OR; see \fref{fig:methods1}). The test track was outfitted with two small wheeled carts (mass of cart \SI{0.3}{\kilo\gram}) with simple sliding contact bearings; mass of each cart could be increased by addition of up to four \SI{0.125}{\kilo\gram} masses for a total mass of \SI{0.8}{\kilo\gram}. The mass was measured using an electronic balance (Ohaus; Parsippany, NJ).    Magnets of identical polarity allowed the carts to bounce after the elastic collision. Carts were actuated by hand to provide initial velocities. The position of the two carts was measured using two ultrasound range sensors (Go Direct; Vernier; Beaverton, OR). Sensor data were logged at \SI{20}{\hertz} sampling frequency, via a wireless Bluetooth link, using the Graphical Analysis app (Vernier; Beaverton, OR) running on an iPad Air (Apple; Cupertino, CA). From the position data, the slope of position versus time was used to estimate velocities before and after the collision.  The mass, velocity, and direction down the track were varied haphazardly.   
+Elastic collision tests ($n=80$) were conducted using a \SI{2.1}{\meter} aluminum momentum test track (Vernier; Beaverton, OR; see \fref{fig:methods1}). The test track was outfitted with two small wheeled carts (mass of cart \SI{0.3}{\kilo\gram}) with simple sliding contact bearings; mass of each cart could be increased by addition of up to four \SI{0.125}{\kilo\gram} masses for a total mass of \SI{0.8}{\kilo\gram}. The mass was measured using an electronic balance (Ohaus; Parsippany, NJ).    Magnets of opposite polarity allowed the carts to stick after the inelastic collision. Carts were actuated by hand to provide initial velocities. The position of the two carts was measured using two ultrasound range sensors (Go Direct; Vernier; Beaverton, OR). Sensor data were logged at \SI{20}{\hertz} sampling frequency, via a wireless Bluetooth link, using the Graphical Analysis app (Vernier; Beaverton, OR) running on an iPad Air (Apple; Cupertino, CA). From the position data, the slope of position versus time was used to estimate velocities before and after the collision.  The mass, velocity, and direction down the track were varied haphazardly.   
 \begin{figure}[h]
 \begin{center}
-\includegraphics[width=\columnwidth]{figures/fig1/IMG_8061_cropped.jpg}
+\includegraphics[width=\columnwidth]{../figures/fig1/IMG_8061_cropped.jpg}
 %\includegraphics[width=\columnwidth]{IMG_6253.jpg}
 %\includegraphics[width=\columnwidth]{figures/fig1.png}
 \end{center}
@@ -93,7 +95,7 @@ For a nondimensional comparison, we also computed the ratio of the change of ene
 \Fref{fig:results1} shows the position data for a typical elastic collision with equal masses, $m_1=m_2=\qty{0.3}{\kilo\gram}$. Before the collision, $m_2$ is stationary while $m_1$ approaches with velocity $v_1=\qty{0.3}{\meter\per\second}$. The masses collide at $t=\qty{2.1}{\second}$. After the collision, $m_1$ is stopped, while $m_2$ is moving with a velocity $v_{2,f}=\qty{0.3}{\meter\per\second}$. 
 \begin{figure}
 \begin{center}
-\includegraphics{figures/fig2/elastic.pdf}
+\includegraphics{../figures/fig2/elastic.pdf}
 \end{center}
 \caption{Position data for a typical elastic collision with equal masses, $m_1=m_2=\qty{0.3}{\kilo\gram}$. Initially, $m_2$ is stationary and $m_1$ is moving at $v_{1,0}=\qty{0.3}{\meter\per\second}$. The masses collide at $t=\SI{2.1}{\second}$. After the collision, $m_2$ is moving with velocity $v_{2,f}=\qty{0.3}{\meter\per\second}$. }
 \label{fig:results1}
@@ -102,19 +104,20 @@ For a nondimensional comparison, we also computed the ratio of the change of ene
 \Fref{fig:results2} shows a bar plot of the change in energy during all collisions, $\Delta E = \qty{-0.01\pm0.02}{\joule}$ (mean$\pm$s.d.). The mean $\Delta E$ is not significantly different from \qty{0}{\joule} (one-sample $t$-test, n=80, d.f.=79, p=0.2596). 
 \begin{figure}
 \begin{center}
-\includegraphics{figures/fig3/energy_change.pdf}
+\includegraphics{../figures/fig3/energy_change.pdf}
 \end{center}
 \caption{Change in energy ($\Delta E$) during all elastic collisions. $\Delta E = \qty{-0.01\pm0.02}{\joule}$ (mean $\pm$ s.d.). The mean $\Delta E$ is not significantly different from \qty{0}{\joule} (one-sample $t$-test, n=80, d.f.=79, p=0.2596).}
 \label{fig:results2}
 \end{figure}
 
 \section{Discussion}
-\student{YOU FILL IN. You will probably write one paragraph using your results to answer if energy is conserved or not. You will probably then write a second paragraph discussing limitations of your findings or proposing some sort of follow-on experiment to do next.}
+\student{The results of the lab show that energy is conserved when 2 carts hit each other on a
+track. The energy lost was \qty{0.1\pm0.2}{\joule}. These results mean that barely any energy was lost confirming that energy is conserved in an elastic collision. This can be applied to other elastic collisions. For example, when a football hits a wide receiver's hands and bounces off. You can use these equations to find the energy momentum and velocity before and after a collision.}
 
 \section{Acknowledgements}
-We thank \student{YOU FILL IN}, C.~Payette, J.~Bartholomew, B.~Turner, K.~Mauger, and S.~McCormick for useful advice and comments on the manuscript, and A.~Hahn, S.~Kealy, K~Muttick, and A.~Sankar, for advice on the design of experiment and learning objectives. Major lab equipment was gifted by the Alumni Association at Morristown Beard School. This work was funded by ONR \#N123456789, AFOSR, NIH, and the National Science Foundation. 
+We thank \student{Liam Atkins, and Nick Troiano}, C.~Payette, J.~Bartholomew, B.~Turner, K.~Mauger, and S.~McCormick for useful advice and comments on the manuscript, and A.~Hahn, S.~Kealy, K~Muttick, and A.~Sankar, for advice on the design of experiment and learning objectives. Major lab equipment was gifted by the Alumni Association at Morristown-Beard School. This work was funded by ONR \#N123456789, AFOSR, NIH, and the National Science Foundation. 
 
 \bibliographystyle{apsrev4-1} % Tell bibtex which bibliography style to use
-\bibliography{references/momentum} % Tell bibtex which .bib file to use (this one is some example file in TexLive's file tree)
+\bibliography{../references/momentum} % Tell bibtex which .bib file to use (this one is some example file in TexLive's file tree)
 
 \end{document}
